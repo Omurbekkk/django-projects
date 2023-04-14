@@ -6,4 +6,22 @@ class PostSerializer(ModelSerializer):
         model = Post
         fields = '__all__'
 
-        
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+
+        # rep['likes'] = Like.objects.filter(post=instance)
+        # rep['test'] = 'hello'
+        # print(rep)
+
+        rep['likes'] = instance.likes.all().count()
+        return rep
+    
+    #  попробуйте написать модель комментарий, для начала как с постами (listing)
+    # на создание, на листинг, на удаление
+    # доп    вьюшки  (@api_view)
+
+    
+
+
+
+    
