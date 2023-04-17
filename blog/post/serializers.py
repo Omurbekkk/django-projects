@@ -20,7 +20,10 @@ class PostSerializer(ModelSerializer):
     # на создание, на листинг, на удаление
     # доп    вьюшки  (@api_view)
 
-    
+
+
+
+
 
 
 
